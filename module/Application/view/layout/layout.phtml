@@ -1,0 +1,149 @@
+<?= $this->doctype() ?>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <?= $this->headTitle('Legalizer ERP')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+    <?= $this->headMeta()
+        ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+        ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+    ?>
+
+    <!-- Le styles -->
+    <?= $this->headLink(
+            [
+                'rel' => 'shortcut icon',
+                'type' => 'image/vnd.microsoft.icon',
+                'href' => $this->basePath() . '/img/favicon.ico'
+            ]
+    )
+        ->prependStylesheet($this->basePath('css/style.css'))
+        ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+        ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+    ?>
+
+    <!-- Scripts -->
+    <?= $this->headScript()
+        ->prependFile($this->basePath('js/botao.js'))
+    ?>
+
+</head>
+<body>
+
+<div class="container">
+    <div id="main">
+        <div class="container">
+            <nav>
+                <div id="draggable" class="nav-xbootstrap">
+                    <ul>
+
+                        <li>
+                            <a href="javascript:void(0)" >
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                                VENDAS
+                            </a>
+                            <ul class="dropdown">
+                                <li><a href="#">Externa</a></li>
+                                <li><a href="#">Balcão</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" >
+                                <span class="glyphicon glyphicon-alert"></span>
+                                ESTOQUE
+
+                            </a>
+                            <ul class="dropdown">
+                                <li><a href="#">Pedidos</a></li>
+                                <li><a href="#">Manutenção</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" >
+                                <span class="glyphicon glyphicon-credit-card"></span>
+                                CASH
+                            </a>
+                            <ul class="dropdown">
+                                <li><a href="#">Pagamentos</a></li>
+                                <li><a href="#">Recebimentos</a></li>
+                                <li><a href="#">Caixa</a></li>
+                                <li><a href="#">Conciliação</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" >
+                                <span class="glyphicon glyphicon-usd"></span>
+                                CONTABIL
+                            </a>
+                            <ul class="dropdown">
+                                <li><a href="#">Pagamentos</a></li>
+                                <li><a href="#">Recebimentos</a></li>
+                                <li><a href="#">Caixa</a></li>
+                                <li><a href="#">Conciliação</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" >
+                                <span class="glyphicon glyphicon-flash"></span>
+                                B.I
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <span class="glyphicon glyphicon-cog"></span>
+                            </a>
+                            <ul class="dropdown">
+
+                                <li><a href="">Endereços</a></li>
+                                <li><a href="">Cidades</a></li>
+                                <li><a href="">Usuários</a></li>
+                                <li><a href="">Tipos de usuários</a></li>
+                                <li><a href="">Grupos de usuários</a></li>
+                                <li><a href="">Permissões</a></li>
+                                <li><a href="">Produtos</a></li>
+                                <li><a href="">Tipos de produtos</a></li>
+                                <li><a href="">Bancos</a></li>
+                                <li><a href="">Contas</a></li>
+                                <li><a href="">Tipos de contas</a></li>
+                                <li><a href="">Tipos de contas</a></li>
+                                <li><a href="">Fornecedores</a></li>
+                                <li><a href="">Parâmetros gerais</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="nav-bg-xbootstrap">
+                        <div class="navbar-xbootstrap">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="" class="title-mobile">legalizer</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="empresa text-center">
+                INTERGRIFE MULTIMARCAS
+            </div>
+
+            <div class='content'>
+                <?= $this->content ?>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<?= $this->headScript()
+    ->prependFile($this->basePath('js/bootstrap.min.js'))
+    ->prependFile($this->basePath('js/jquery-3.1.0.min.js'))
+?>
+<?= $this->inlineScript() ?>
+</body>
+</html>
